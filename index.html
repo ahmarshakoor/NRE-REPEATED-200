@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body style="text-align:center; padding-top:100px; font-family:sans-serif;">
+  <h2>FMG Test Site</h2>
+  <p>Pehle login karein</p>
+  <div data-netlify-identity-button></div>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Login hone ke baad home.html pe bhej dega
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("login", user => {
+        window.location.href = "/home.html"; // yahan apna file ka naam likho
+      });
+    }
+  </script>
+</body>
+</html>
